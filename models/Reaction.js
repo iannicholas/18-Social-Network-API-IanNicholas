@@ -1,6 +1,6 @@
-const { Schema, model } = require('mongoose');
-const userSchema = require('./User');
-const thoughtSchema = require('./Thought');
+const { Schema, model } = require("mongoose");
+const userSchema = require("./User");
+const thoughtSchema = require("./Thought");
 
 // schema to create the Reaction model
 const reactionSchema = new Schema(
@@ -13,26 +13,26 @@ const reactionSchema = new Schema(
     },
     reactionBody: {
       type: String,
-      required: [true, 'Reaction body is required'],
-      length: [1, 280, 'Reaction body must be between 1 and 280 characters'],
+      required: [true, "Reaction body is required"],
+      length: [1, 280, "Reaction body must be between 1 and 280 characters"],
     },
     username: {
       type: String,
-      required: [true, 'Username is required'],
+      required: [true, "Username is required"],
     },
     createdAt: {
       type: Date,
       default: Date.now,
-      getter: function() {
+      getter: function () {
         return this.createdAt.toLocaleString();
-      }
+      },
     },
 
     // reaction fields subdocument schema in the Thought model
     thought: {
       type: Schema.Types.ObjectId,
-      ref: 'Thought',
-      required: [true, 'Thought is required'],
+      ref: "Thought",
+      required: [true, "Thought is required"],
     },
   },
   {
@@ -43,7 +43,7 @@ const reactionSchema = new Schema(
 );
 
 // initializes the Reaction model
-const Reaction = model('Reaction', reactionSchema);
+const Reaction = model("Reaction", reactionSchema);
 
 // export the Reaction model
 module.exports = Reaction;
