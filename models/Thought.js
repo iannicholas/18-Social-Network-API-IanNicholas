@@ -1,6 +1,7 @@
 const { Schema, model, Types } = require("mongoose");
 const userSchema = require("./User");
 
+// schema to create reaction subdocument
 const reactionSchema = new Schema(
   {
     reactionId: {
@@ -25,13 +26,6 @@ const reactionSchema = new Schema(
         return this.createdAt.toLocaleString();
       },
     },
-
-    // reaction fields subdocument schema in the Thought model
-    // thought: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: "thought",
-    //   required: [true, "Thought is required"],
-    // },
   },
   {
     toJSON: {

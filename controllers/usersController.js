@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require("../models/User");
 
 module.exports = {
   // GET /api/users/
@@ -11,13 +11,13 @@ module.exports = {
   // GET /api/users/:id
   getSingleUser: (req, res) => {
     User.findOne({ _id: req.params._id })
-      .select('-__v')
+      .select("-__v")
       // .populate('thoughts')
       // .populate('friends')
 
       .then((user) =>
         !user
-          ? res.status(404).json({ message: 'No user with that ID' })
+          ? res.status(404).json({ message: "No user with that ID" })
           : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
@@ -65,5 +65,4 @@ module.exports = {
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.status(500).json(err));
   },
-};  
-
+};
