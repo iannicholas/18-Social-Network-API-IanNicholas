@@ -31,7 +31,7 @@ const reactionSchema = new Schema(
     // reaction fields subdocument schema in the Thought model
     thought: {
       type: Schema.Types.ObjectId,
-      ref: "Thought",
+      ref: "thought",
       required: [true, "Thought is required"],
     },
   },
@@ -43,7 +43,7 @@ const reactionSchema = new Schema(
 );
 
 // initializes the Reaction model
-const Reaction = model("Reaction", reactionSchema);
+const Reaction = model("reaction", reactionSchema);
 
 // export the Reaction model
 module.exports = Reaction;

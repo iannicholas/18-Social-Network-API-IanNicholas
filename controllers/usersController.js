@@ -10,9 +10,11 @@ module.exports = {
 
   // GET /api/users/:id
   getSingleUser: (req, res) => {
-    User.findOne({ _id: req.params.userId })
+    User.findOne({ _id: req.params._id })
       .select('-__v')
-      .populate('posts')
+      // .populate('thoughts')
+      // .populate('friends')
+
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
@@ -30,7 +32,7 @@ module.exports = {
 
   // PUT /api/users/:id
   updateUser: (req, res) => {
-    User.findOneAndUpdate({ _id: req.params.userId }, req.body, {
+    User.findOneAndUpdate({ _id: req.params._id }, req.body, {
       new: true,
     })
       .then((dbUserData) => res.json(dbUserData))
@@ -39,14 +41,14 @@ module.exports = {
 
   // DELETE /api/users/:id
   deleteUser: (req, res) => {
-    User.findOneAndDelete({ _id: req.params.userId })
+    User.findOneAndDelete({ _id: req.params._id })
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.status(500).json(err));
   },
   // POST /api/users/:userId/friends/:friendId
   addFriend: (req, res) => {
     User.findOneAndUpdate(
-      { _id: req.params.userId },
+      { _id: req.params._id },
       { $push: { friends: req.params.friendId } },
       { new: true }
     )
@@ -56,13 +58,12 @@ module.exports = {
   // DELETE /api/users/:userId/friends/:friendId
   deleteFriend: (req, res) => {
     User.findOneAndUpdate(
-      { _id: req.params.userId },
+      { _id: req.params._id },
       { $pull: { friends: req.params.friendId } },
       { new: true }
     )
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.status(500).json(err));
-  }
-
+  },
 };  
 

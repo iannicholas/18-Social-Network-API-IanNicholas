@@ -20,13 +20,14 @@ const userSchema = new Schema(
       ],
       required: [true, "Email is required"],
     },
-    thoughts: [{ type: Schema.Types.ObjectId, ref: "Thought" }],
-    friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    thoughts: [{ type: Schema.Types.ObjectId, ref: "thought" }],
+    friends: [{ type: Schema.Types.ObjectId, ref: "friend" }],
   },
   {
     toJSON: {
-      getters: true,
+      virtuals: true,
     },
+    id: false,
   }
 );
 
@@ -36,6 +37,6 @@ userSchema.virtual("friendCount").get(function () {
 });
 
 // initializes the User model
-const User = model("User", userSchema);
+const User = model("user", userSchema);
 
 module.exports = User;
