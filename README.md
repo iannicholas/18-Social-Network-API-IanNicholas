@@ -7,6 +7,9 @@
   ## Descritpion
   A social network API that uses Mongoose and NoSQL. Creates, updates and deletes users posts and reactions to posts.
 
+  ## Technologies Used
+  Mongoose, MongoDB, REST, CRUD
+
   ## Table Of Contents
   [Installation](#installation)
 
