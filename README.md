@@ -28,7 +28,7 @@
   MIT
 
   ## Usage
-  Navigate to Insomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
+  After installation ans starting navigate to Insomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
   
   ## Test
   ~~~
