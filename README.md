@@ -5,7 +5,7 @@
   [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Descritpion
-  A social network API that uses Mongoose and NoSQL. Creates, updates and deletes users posts and reactions to posts.
+  A social network API that uses Mongoose and NoSQL. Creates, reads, updates, and deletes users posts and reactions to posts. A standard social media API.
 
   ## Technologies Used
   Mongoose, MongoDB, REST, CRUD
@@ -22,9 +22,7 @@
   ![Demo of all routes to return all users and all thoughts being tested in Insomnia.](./assets/socialnetwork.gif)
   ## Installation
 
-  ~~~
-  None
-  ~~~
+  Fork reposetory and then navigate to terminal for that project. Type npm start. Navigate to INsomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
 
   ## License
   MIT
