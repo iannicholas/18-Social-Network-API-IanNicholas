@@ -22,13 +22,13 @@
   ![Demo of all routes to return all users and all thoughts being tested in Insomnia.](./assets/socialnetwork.gif)
   ## Installation
 
-  Fork reposetory and then navigate to terminal for that project. Type npm start. Navigate to INsomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
+  Fork reposetory and then navigate to terminal for that project. Type npm install then npm start. Navigate to Insomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
 
   ## License
   MIT
 
   ## Usage
-  Ran in Insomnia and connected to MongoDB.
+  Navigate to Insomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
   
   ## Test
   ~~~
