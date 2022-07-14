@@ -8,7 +8,7 @@
   A social network API that uses Mongoose and NoSQL. Creates, reads, updates, and deletes users posts and reactions to posts. A standard social media API.
 
   ## Technologies Used
-  Mongoose, MongoDB, REST, CRUD
+  Nodemon, Express, Mongoose, MongoDB, REST, CRUD
 
   ## Table Of Contents
   [Installation](#installation)
@@ -28,7 +28,7 @@
   MIT
 
   ## Usage
-  After installation ans starting navigate to Insomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
+  After installation and starting navigate to Insomnia and connect to localhost:3001. Run any of the routes found in the /routes/api/thoughtRoutes or userRoutes.
   
   ## Test
   ~~~
