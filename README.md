@@ -5,7 +5,7 @@
   [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Descritpion
-  A social network API that uses Mongoose and NoSQL. Creates, reads, updates, and deletes users posts and reactions to posts. A standard social media API.
+  A social network API that uses Mongoose and NoSQL. Creates, reads, updates, and deletes users posts and reactions to posts. Complete backend for a standard social media API.
 
   ## Technologies Used
   Nodemon, Express, Mongoose, MongoDB, REST, CRUD
