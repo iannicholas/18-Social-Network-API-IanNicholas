@@ -11,6 +11,8 @@
   Nodemon, Express, Mongoose, MongoDB, REST, CRUD
 
   ## Table Of Contents
+  [Live Demo](#livedemo)
+
   [Installation](#installation)
 
   [License](#license)
@@ -18,6 +20,8 @@
   [Usage](#usage)
 
   [Tests](#test)
+
+  ## Live Demo
 
   ![Demo of all routes to return all users and all thoughts being tested in Insomnia.](./assets/socialnetwork.gif)
   ## Installation
